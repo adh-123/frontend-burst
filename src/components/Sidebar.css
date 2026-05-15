@@ -1,0 +1,146 @@
+/* Sidebar */
+.sidebar {
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-sizing: border-box;
+}
+
+/* Top */
+.sidebar-top {
+  margin-bottom: 25px;
+}
+
+/* Logo */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sidebar-logo h2 {
+  margin: 0;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+  font-size: 22px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00c6ff);
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+}
+
+/* Circle */
+.logo-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00c6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Rooms header */
+.rooms-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.rooms-header h4 {
+  margin: 0;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+/* Add button */
+.add-room-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Input */
+.room-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 18px;
+  border: 1px solid #ddd;
+  outline: none;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.room-input:focus {
+  border: 2px solid gainsboro;
+}
+
+/* Rooms list */
+.rooms-list {
+  flex: 1;
+}
+
+/* Room item */
+.room-item {
+  padding: 14px 18px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 15px;
+
+}
+
+/* Hover */
+.room-item:hover {
+  background: #f1dff8;
+}
+
+/* Active room */
+.room-item.active {
+  background: linear-gradient(
+    90deg,
+
+    #00c6ff
+  );
+
+  color: white;
+  height:20px;
+  font-weight: 600;
+}
+
+/* Bottom user */
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  border-radius: 20px;
+  background:   #00c6ff ;
+}
+
+/* Avatar */
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: white;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Username */
+.user-name {
+  flex: 1;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
