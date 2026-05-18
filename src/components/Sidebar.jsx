@@ -24,7 +24,7 @@ export default function Sidebar() {
     try {
 
       const response =await fetch(
-          `https://burst-backend-f491.onrender.com/rooms/${user.id}`
+          `${import.meta.env.VITE_API_URL}/rooms/${user.id}`
         );
 
       const data = await response.json();

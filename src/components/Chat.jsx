@@ -45,7 +45,7 @@ export default function Chat() {
       return;
 
     fetch(
-      `https://burst-backend-f491.onrender.com/messages/${activeRoom.id}`
+      `${import.meta.env.VITE_API_URL}/messages/${activeRoom.id}`
     )
 
       .then((res) => res.json())

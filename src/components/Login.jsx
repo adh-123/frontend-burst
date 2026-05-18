@@ -59,7 +59,7 @@ export default function Login() {
     if (isSignup) {
 
       const response = await fetch(
-        "https://burst-backend-f491.onrender.com/register",
+        fetch(`${import.meta.env.VITE_API_URL}/register`),
         {
           method: "POST",
 

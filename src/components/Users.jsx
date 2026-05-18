@@ -9,7 +9,7 @@ export default function Users() {
   useEffect(() => {
 
     fetch(
-      "https://burst-backend-f491.onrender.com/users"
+      `${import.meta.env.VITE_API_URL}/users`
     )
 
       .then((res) => res.json())

@@ -10,7 +10,7 @@ export default function ForgotPassword(){
     const[message,setMessage]=useState("");
     const navigate = useNavigate();
     const handleSubmit=async()=>{
-        const response=await fetch("https://burst-backend-f491.onrender.com/forgot-password",
+        const response=await fetch(fetch(`${import.meta.env.VITE_API_URL}/forgot-password`),
             {
                method:"POST",
                headers:{

@@ -21,7 +21,7 @@ if(password !== confirmPassword){
 try{
 
 const response = await fetch(
-"https://burst-backend-f491.onrender.com/reset-password/",
+`${import.meta.env.VITE_API_URL}/reset-password/`,
 {
 method:"POST",
 headers:{
