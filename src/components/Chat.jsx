@@ -45,7 +45,7 @@ export default function Chat() {
       return;
 
     fetch(
-      `http://localhost:8000/messages/${activeRoom.id}`
+      `https://burst-backend-f491.onrender.com/messages/${activeRoom.id}`
     )
 
       .then((res) => res.json())

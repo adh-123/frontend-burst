@@ -9,7 +9,7 @@ export default function Users() {
   useEffect(() => {
 
     fetch(
-      "http://127.0.0.1:8000/users"
+      "https://burst-backend-f491.onrender.com/users"
     )
 
       .then((res) => res.json())

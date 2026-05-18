@@ -27,12 +27,12 @@ export default function App() {
           : <Login />
         }
       />
-      {/* USERS */}
+    
       <Route
         path="/users"
         element={<Users />}
       />
-      {/* FORGOT PASSWORD */}
+      
       <Route
         path="/forgot-password"
         element={<ForgotPassword />}

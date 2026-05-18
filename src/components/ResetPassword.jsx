@@ -21,7 +21,7 @@ if(password !== confirmPassword){
 try{
 
 const response = await fetch(
-"http://localhost:8000/reset-password/",
+"https://burst-backend-f491.onrender.com/reset-password/",
 {
 method:"POST",
 headers:{

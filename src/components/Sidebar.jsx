@@ -24,7 +24,7 @@ export default function Sidebar() {
     try {
 
       const response =await fetch(
-          `http://localhost:8000/rooms/${user.id}`
+          `https://burst-backend-f491.onrender.com/rooms/${user.id}`
         );
 
       const data = await response.json();

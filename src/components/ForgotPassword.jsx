@@ -10,7 +10,7 @@ export default function ForgotPassword(){
     const[message,setMessage]=useState("");
     const navigate = useNavigate();
     const handleSubmit=async()=>{
-        const response=await fetch("http://localhost:8000/forgot-password",
+        const response=await fetch("https://burst-backend-f491.onrender.com/forgot-password",
             {
                method:"POST",
                headers:{

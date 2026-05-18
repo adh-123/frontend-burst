@@ -59,7 +59,7 @@ export default function Login() {
     if (isSignup) {
 
       const response = await fetch(
-        "http://127.0.0.1:8000/register",
+        "https://burst-backend-f491.onrender.com/register",
         {
           method: "POST",
 
