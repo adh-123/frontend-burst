@@ -14,7 +14,7 @@ if(!password || !confirmPassword){
     return;
 }
 
-if(password !== confirmPassword);
+if(password !== confirmPassword){
     setMessage("Passwords did not match");
     return;
 }
