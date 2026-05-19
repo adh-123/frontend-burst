@@ -9,27 +9,49 @@ export default function ForgotPassword(){
     const[email, setEmail]=useState("");
     const[message,setMessage]=useState("");
     const navigate = useNavigate();
-    const handleSubmit=async()=>{
-        const response=await fetch(`${import.meta.env.VITE_API_URL}/forgot-password`,
+    const handleSubmit = async () => {
+        try {
+            const response = await fetch(
+
+            `${import.meta.env.VITE_API_URL}/forgot-password`,
+
             {
-               method:"POST",
-               headers:{
-                "Content-Type":
-                "application/json"
-               } ,
-               body:JSON.stringify({email})
-            });
-            const data=await response.json();
-            setMessage(data.message===
-                "Reset link created"
-                ?
-                "Reset link sent successfully"
-                :
-                "Email not found"
+                method: "POST",
 
-            )
+                headers: {
+                    "Content-Type":
+                    "application/json"
+                },
 
-    };
+                body: JSON.stringify({
+                    email
+                })
+            }
+        );
+
+        const data =
+            await response.json();
+
+        console.log(data);
+
+        setMessage(
+            response.ok
+            ? data.message
+            : data.message ||
+              "Email failed"
+        );
+
+    } catch(error){
+
+        console.log(error);
+
+        setMessage(
+            "Server error"
+        );
+
+    }
+
+};
     return(
 
 <div
