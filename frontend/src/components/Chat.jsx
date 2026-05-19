@@ -103,7 +103,8 @@ useEffect(() => {
 socket.current =new WebSocket( `${WS_URL}/ws/${activeRoom.id}`);
     socket.current.onopen =() => {
 
-        console.log("Connected");
+        console.log("Connected"
+ );
 
       };
 

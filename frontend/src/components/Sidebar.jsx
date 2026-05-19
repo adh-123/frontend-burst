@@ -97,7 +97,7 @@ export default function Sidebar() {
 
       const response =
         await fetch(
-          "http://localhost:8000/rooms",
+          `${import.meta.env.VITE_API_URL}/rooms`,
           {
             method: "POST",
 
