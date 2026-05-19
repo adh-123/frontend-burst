@@ -148,7 +148,7 @@ export default function Sidebar() {
   try {
 
     await fetch(
-      `http://localhost:8000/rooms/${roomId}`,
+      `${import.meta.env.VITE_API_URL}/rooms/${roomId}`,
       {
         method: "DELETE",
       }
