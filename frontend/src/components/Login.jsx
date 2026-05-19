@@ -59,7 +59,7 @@ export default function Login() {
     if (isSignup) {
 
       const response = await fetch(
-        fetch(`${import.meta.env.VITE_API_URL}/register`),
+        `${import.meta.env.VITE_API_URL}/register`,
         {
           method: "POST",
 
@@ -102,7 +102,7 @@ export default function Login() {
     else {
 
       const response = await fetch(
-        "http://127.0.0.1:8000/login",
+        `${import.meta.env.VITE_API_URL}/login`,
         {
           method: "POST",
 
