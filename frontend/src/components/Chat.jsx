@@ -72,9 +72,7 @@ export default function Chat() {
   // LOAD USERS
 useEffect(() => {
 
-  fetch(
-    "http://127.0.0.1:8000/users"
-  )
+  fetch(`${import.meta.env.VITE_API_URL}/users`)
 
     .then((res) => res.json())
 
@@ -98,17 +96,14 @@ useEffect(() => {
     if (!activeRoom?.id)
       return;
 
-    socket.current =
-      new WebSocket(
-        `ws://localhost:8000/ws/${activeRoom.id}`
-      );
+ const WS_URL = import.meta.env.VITE_API_URL
+  .replace("https://", "wss://")
+  .replace("http://", "ws://");
 
-    socket.current.onopen =
-      () => {
+socket.current =new WebSocket( `${WS_URL}/ws/${activeRoom.id}`);
+    socket.current.onopen =() => {
 
-        console.log(
-          "Connected"
-        );
+        console.log("Connected");
 
       };
 
